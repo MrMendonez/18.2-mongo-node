@@ -7,8 +7,10 @@ db.on('error', function(err) {
   console.log("database error: " + err);
 });
 
+app.use(express.static("public"));
+
 app.get('/', function(req, res) {
-  res.send("Hello world!");
+  res.send(index.html);
 })
 
 app.get('/animals', function(req, res) {
