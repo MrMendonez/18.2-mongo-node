@@ -3,7 +3,14 @@ $(document).ready(function() {
 
   $.getJSON("/all", function(data) {
     for(var i = 0; i < data.length; i++) {
-      $('#results tbody').append("<tr><td>" + data[i].name + "</td><td>" + data[i].numlegs + "</td><td>" + data[i].class + "</td><td>" + data[i].weight + "</td><td>" + data[i].whatIWouldReallyCallIt + "</td></tr>");
+      var newTr = "<tr>";
+      newTr += "<td>" + data[i].name + "</td>";
+      newTr += "<td>" + data[i].numlegs + "</td>";
+      newTr += "<td>" + data[i].class + "</td>";
+      newTr += "<td>" + data[i].weight + "</td>";
+      newTr += "<td>" + data[i].whatIWouldReallyCallIt + "</td>";
+      newTr += "</tr>";
+      $('#results tbody').append(newTr);
     }
   })
 
@@ -20,7 +27,7 @@ $(document).ready(function() {
           newTr += "<td>" + data[i].whatIWouldReallyCallIt + "</td>";
           newTr += "</tr>";
           $('#results tbody').append(newTr);
-        console.log("Weight button clicked!");
+        console.log("A button was clicked!");
       }
     })
   });
