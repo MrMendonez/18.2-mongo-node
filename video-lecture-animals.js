@@ -31,7 +31,18 @@ app.get('/weight', function(req, res) {
       res.json(documents);
     }
   })
-})
+});
+
+app.get('/name', function(req, res) {
+  db.animals.find().sort({name: 1}, function(err, documents) {
+    if(err) {
+      console.log(err);
+    }
+    else {
+      res.json(documents);
+    }
+  })
+});
 
 app.listen(PORT, function() {
   console.log("Listening on port: " + PORT);
