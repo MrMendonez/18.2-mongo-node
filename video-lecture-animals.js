@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
   res.send(index.html);
 })
 
-app.get('/animals', function(req, res) {
+app.get('/all', function(req, res) {
   db.animals.find({}, function(err, documents) {
     if(err) {
       console.log(err);
