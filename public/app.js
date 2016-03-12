@@ -12,7 +12,7 @@ $(document).ready(function() {
     $.getJSON("/weight", function(data) {
       $('#results tbody').empty();
       for(var i = 0; i < data.length; i++) {
-        $('#results').append("<tr><td>" + data[i].name + "</td><td>" + data[i].numlegs + "</td><td>" + data[i].class + "</td><td>" + data[i].weight + "</td><td>" + data[i].whatIWouldReallyCallIt + "</td></tr>");
+        $('#results tbody').append("<tr><td>" + data[i].name + "</td><td>" + data[i].numlegs + "</td><td>" + data[i].class + "</td><td>" + data[i].weight + "</td><td>" + data[i].whatIWouldReallyCallIt + "</td></tr>");
         console.log("Weight button clicked!");
       }
     })
@@ -23,7 +23,7 @@ $(document).ready(function() {
     $.getJSON("/name", function(data) {
       $('#results tbody').empty();
       for(var i = 0; i < data.length; i++) {
-        $('#results').append("<tr><td>" + data[i].name + "</td><td>" + data[i].numlegs + "</td><td>" + data[i].class + "</td><td>" + data[i].weight + "</td><td>" + data[i].whatIWouldReallyCallIt + "</td></tr>");
+        $('#results tbody').append("<tr><td>" + data[i].name + "</td><td>" + data[i].numlegs + "</td><td>" + data[i].class + "</td><td>" + data[i].weight + "</td><td>" + data[i].whatIWouldReallyCallIt + "</td></tr>");
         console.log("Weight button clicked!");
       }
     })
