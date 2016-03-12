@@ -20,6 +20,17 @@ app.get('/animals', function(req, res) {
       res.json(documents);
     }
   })
+});
+
+app.get('/weight', function(req, res) {
+  db.animals.find().sort({weight: -1}, function(err, documents) {
+    if(err) {
+      console.log(err);
+    }
+    else {
+      res.json(documents);
+    }
+  })
 })
 
 app.listen(PORT, function() {
