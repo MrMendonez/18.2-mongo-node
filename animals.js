@@ -1,7 +1,7 @@
 var express = require('express');
 var mongojs = require('mongojs');
 var app = express();
-
+// set up db
 var PORT = process.env.PORT || 3000;
 var db = mongojs('zoo', ['animals']);
 db.on('error', function(err) {
