@@ -1,16 +1,14 @@
 var express = require('express');
 var app = express();
-// request - the ability to make web requests
-// scrapes - allows us to use jquery syntax to parse a lot of data
-var request = require('request');
-var cheerio = require('cheerio');
+var request = require('request'); // Gives us the ability to make web requests
+var cheerio = require('cheerio'); // Allows us to use jquery syntax to parse a lot of data
 var PORT = 3000;
 
 // Database Configuration
 // Connection to mongo database and manipulate
 var mongojs = require('mongojs');
 var databaseUrl = "scraper";
-var collections = ["scrapedData"];
+var collections = ["scrapedData"];save
 var db = mongojs(databaseUrl, collections);
 db.on('error', function(err) {
   console.log("Database Error: ", err);
